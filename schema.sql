@@ -19,7 +19,8 @@ create table if not exists scans (
     points integer not null default 10,
     weight_kg double precision not null default 0,
     co2_kg double precision not null default 0,
-    created_at timestamptz not null default now()
+    created_at timestamptz not null default now(),
+    photo bytea
 );
 
 create index if not exists idx_scans_user on scans (user_id, created_at desc);
