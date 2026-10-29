@@ -24,3 +24,21 @@ create table if not exists scans (
 );
 
 create index if not exists idx_scans_user on scans (user_id, created_at desc);
+
+create table if not exists classrooms (
+    id bigint generated always as identity primary key,
+    name text not null,
+    code text not null unique,
+    owner_id bigint not null references users(id) on delete cascade,
+    created_at timestamptz not null default now()
+);
+
+create table if not exists classroom_members (
+    classroom_id bigint not null references classrooms(id) on delete cascade,
+    user_id bigint not null references users(id) on delete cascade,
+    joined_at timestamptz not null default now(),
+    primary key (classroom_id, user_id)
+);
+
+create index if not exists idx_members_user on classroom_members (user_id);
+
