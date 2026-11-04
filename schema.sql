@@ -50,3 +50,4 @@ create index if not exists idx_members_user on classroom_members (user_id);
 comment on table users is 'App accounts, including guests.';
 comment on column users.email is 'Unique login email.';
 comment on column users.password_hash is 'PBKDF2 password hash.';
+comment on column users.name is 'Display name.';
