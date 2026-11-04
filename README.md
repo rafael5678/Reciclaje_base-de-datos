@@ -19,4 +19,11 @@ Si Render ya tiene `DATABASE_URL`, `init_db()` del backend crea o completa las m
 | `classrooms` | Salones y código de invitación |
 | `classroom_members` | Miembros y ranking |
 
-Índices: `idx_scans_user`, `idx_members_user`.
+## Relaciones
+
+- Un usuario tiene muchos escaneos (`scans.user_id` → `users.id`).
+- Un usuario puede ser dueño de salones (`classrooms.owner_id` → `users.id`).
+- Un salón tiene muchos miembros (`classroom_members`).
+- Si se borra un usuario o un salón, Postgres borra en cascada lo que depende.
+
+Índices: `idx_scans_user` (historial), `idx_members_user` (mis salones).
