@@ -52,3 +52,4 @@ comment on column users.email is 'Unique login email.';
 comment on column users.password_hash is 'PBKDF2 password hash.';
 comment on column users.name is 'Display name.';
 comment on column users.created_at is 'Account creation time.';
+comment on table scans is 'Saved waste classifications.';
