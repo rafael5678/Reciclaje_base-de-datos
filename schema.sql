@@ -78,3 +78,4 @@ comment on index idx_members_user is 'Classrooms for a given user.';
 -- scans.photo is optional JPEG. (2)
 -- classrooms.code is a stable invite seed. (3)
 -- classroom_members uses a composite primary key. (4)
+-- idx_scans_user speeds up history lists. (5)
