@@ -63,3 +63,4 @@ comment on column scans.weight_kg is 'Catalog weight for this material.';
 comment on column scans.co2_kg is 'Avoided CO2 if sorted well.';
 comment on column scans.photo is 'Optional JPEG bytes.';
 comment on column scans.created_at is 'When the scan was saved.';
+comment on table classrooms is 'Class groups for ranking.';
