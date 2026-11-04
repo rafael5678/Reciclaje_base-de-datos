@@ -81,3 +81,4 @@ comment on index idx_members_user is 'Classrooms for a given user.';
 -- idx_scans_user speeds up history lists. (5)
 -- idx_members_user speeds up my-classrooms queries. (6)
 -- guest emails use @invitado.ecoscan. (7)
+-- points are computed in the API, not in SQL. (8)
