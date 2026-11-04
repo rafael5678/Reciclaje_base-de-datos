@@ -1,4 +1,4 @@
--- EcoScan para Supabase / Postgres.
+-- EcoScan esquema v1 para Supabase / Postgres.
 -- Pega esto en el SQL Editor de Supabase (o deja que el backend cree las tablas).
 
 -- Cuentas. El correo es único; los invitados usan @invitado.ecoscan.
@@ -25,6 +25,7 @@ create table if not exists scans (
     photo bytea
 );
 
+-- Lista el historial de un usuario ordenado por fecha.
 create index if not exists idx_scans_user on scans (user_id, created_at desc);
 
 -- Salón de clase. code es el código interno; el de invitación rota en el backend.
@@ -44,4 +45,5 @@ create table if not exists classroom_members (
     primary key (classroom_id, user_id)
 );
 
+-- Lista los salones de un usuario sin recorrer toda la tabla.
 create index if not exists idx_members_user on classroom_members (user_id);
