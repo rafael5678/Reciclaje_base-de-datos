@@ -1,7 +1,7 @@
 -- EcoScan schema v1 for Supabase / Postgres.
 -- Paste this in the Supabase SQL editor (or let the backend create the tables).
 
--- Cuentas. El correo es único; los invitados usan @invitado.ecoscan.
+-- Accounts. Email is unique; guests use @invitado.ecoscan.
 create table if not exists users (
     id bigint generated always as identity primary key,
     name text not null,
