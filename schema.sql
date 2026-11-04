@@ -10,7 +10,7 @@ create table if not exists users (
     created_at timestamptz not null default now()
 );
 
--- Residuos escaneados. photo guarda el JPEG; points los calcula el backend.
+-- Scanned waste. photo stores JPEG; points are computed by the backend.
 create table if not exists scans (
     id bigint generated always as identity primary key,
     user_id bigint not null references users(id) on delete cascade,
