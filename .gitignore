@@ -3,3 +3,5 @@
 .DS_Store
 *.sql.bak
 Thumbs.db
+.vscode/
+.idea/
