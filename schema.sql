@@ -97,3 +97,4 @@ comment on index idx_members_user is 'Classrooms for a given user.';
 -- users.email is unique. (21)
 -- scans.photo is optional JPEG. (22)
 -- classrooms.code is a stable invite seed. (23)
+-- classroom_members uses a composite primary key. (24)
