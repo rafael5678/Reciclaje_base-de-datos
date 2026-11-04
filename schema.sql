@@ -58,3 +58,4 @@ comment on column scans.material_code is 'Catalog code such as PET or PAP.';
 comment on column scans.object_name is 'Name of the object in the photo.';
 comment on column scans.confidence is 'Model confidence from 0 to 1.';
 comment on column scans.separated_well is 'Whether the user sorted it correctly.';
+comment on column scans.points is 'Points awarded by the backend.';
