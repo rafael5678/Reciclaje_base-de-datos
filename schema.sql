@@ -25,7 +25,7 @@ create table if not exists scans (
     photo bytea
 );
 
--- Lista el historial de un usuario ordenado por fecha.
+-- Lists a user's history ordered by date.
 create index if not exists idx_scans_user on scans (user_id, created_at desc);
 
 -- Salón de clase. code es el código interno; el de invitación rota en el backend.
