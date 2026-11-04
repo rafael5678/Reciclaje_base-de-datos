@@ -45,5 +45,5 @@ create table if not exists classroom_members (
     primary key (classroom_id, user_id)
 );
 
--- Lista los salones de un usuario sin recorrer toda la tabla.
+-- Lists a user's classrooms without a full table scan.
 create index if not exists idx_members_user on classroom_members (user_id);
