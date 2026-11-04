@@ -61,3 +61,4 @@ comment on column scans.separated_well is 'Whether the user sorted it correctly.
 comment on column scans.points is 'Points awarded by the backend.';
 comment on column scans.weight_kg is 'Catalog weight for this material.';
 comment on column scans.co2_kg is 'Avoided CO2 if sorted well.';
+comment on column scans.photo is 'Optional JPEG bytes.';
