@@ -66,3 +66,4 @@ comment on column scans.created_at is 'When the scan was saved.';
 comment on table classrooms is 'Class groups for ranking.';
 comment on column classrooms.name is 'Classroom display name.';
 comment on column classrooms.code is 'Stable seed for rotating invites.';
+comment on column classrooms.owner_id is 'User who created the classroom.';
