@@ -73,3 +73,4 @@ comment on column classroom_members.classroom_id is 'Classroom being joined.';
 comment on column classroom_members.user_id is 'Member user id.';
 comment on column classroom_members.joined_at is 'When the member joined.';
 comment on index idx_scans_user is 'Per-user scan history by date.';
+comment on index idx_members_user is 'Classrooms for a given user.';
