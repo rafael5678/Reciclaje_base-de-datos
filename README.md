@@ -1,9 +1,22 @@
 # EcoScan — base de datos
 
-Esquema para **Supabase (Postgres)**.
+Esquema para **Supabase (Postgres)**. El backend también puede crear estas tablas al arrancar si tiene `DATABASE_URL`.
+
+## Cómo aplicarlo
 
 1. Crea el proyecto en Supabase.
 2. Abre SQL Editor y ejecuta `schema.sql`.
-3. Copia la URI de conexión y mañana la pondremos en Render como `DATABASE_URL`.
+3. Copia la URI de conexión y configúrala en Render como `DATABASE_URL`.
 
-Tablas: `users` y `scans`.
+Si Render ya tiene `DATABASE_URL`, `init_db()` del backend crea o completa las mismas tablas.
+
+## Tablas
+
+| Tabla | Uso |
+|-------|-----|
+| `users` | Cuentas, invitados y dueños de salón |
+| `scans` | Historial de residuos, puntos, foto |
+| `classrooms` | Salones y código de invitación |
+| `classroom_members` | Miembros y ranking |
+
+Índices: `idx_scans_user`, `idx_members_user`.
