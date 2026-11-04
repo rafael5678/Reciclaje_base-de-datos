@@ -47,3 +47,4 @@ create table if not exists classroom_members (
 
 -- Lists a user's classrooms without a full table scan.
 create index if not exists idx_members_user on classroom_members (user_id);
+comment on table users is 'App accounts, including guests.';
