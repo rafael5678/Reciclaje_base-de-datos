@@ -71,3 +71,4 @@ comment on column classrooms.created_at is 'Classroom creation time.';
 comment on table classroom_members is 'Classroom membership.';
 comment on column classroom_members.classroom_id is 'Classroom being joined.';
 comment on column classroom_members.user_id is 'Member user id.';
+comment on column classroom_members.joined_at is 'When the member joined.';
