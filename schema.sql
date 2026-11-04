@@ -28,7 +28,7 @@ create table if not exists scans (
 -- Lists a user's history ordered by date.
 create index if not exists idx_scans_user on scans (user_id, created_at desc);
 
--- Salón de clase. code es el código interno; el de invitación rota en el backend.
+-- Classroom. code is internal; the live invite rotates in the backend.
 create table if not exists classrooms (
     id bigint generated always as identity primary key,
     name text not null,
