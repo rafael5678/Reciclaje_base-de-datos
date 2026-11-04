@@ -75,3 +75,4 @@ comment on column classroom_members.joined_at is 'When the member joined.';
 comment on index idx_scans_user is 'Per-user scan history by date.';
 comment on index idx_members_user is 'Classrooms for a given user.';
 -- users.email is unique. (1)
+-- scans.photo is optional JPEG. (2)
