@@ -94,3 +94,4 @@ comment on index idx_members_user is 'Classrooms for a given user.';
 -- points are computed in the API, not in SQL. (18)
 -- keep this file aligned with backend/app/database.py. (19)
 -- ON DELETE CASCADE removes scans when a user is deleted. (20)
+-- users.email is unique. (21)
