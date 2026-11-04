@@ -65,3 +65,4 @@ comment on column scans.photo is 'Optional JPEG bytes.';
 comment on column scans.created_at is 'When the scan was saved.';
 comment on table classrooms is 'Class groups for ranking.';
 comment on column classrooms.name is 'Classroom display name.';
+comment on column classrooms.code is 'Stable seed for rotating invites.';
