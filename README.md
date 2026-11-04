@@ -1,29 +1,29 @@
-# EcoScan — base de datos
+# EcoScan — database
 
-Esquema para **Supabase (Postgres)**. El backend también puede crear estas tablas al arrancar si tiene `DATABASE_URL`.
+Schema for **Supabase (Postgres)**. The backend can also create these tables on boot when `DATABASE_URL` is set.
 
-## Cómo aplicarlo
+## How to apply it
 
-1. Crea el proyecto en Supabase.
-2. Abre SQL Editor y ejecuta `schema.sql`.
-3. Copia la URI de conexión y configúrala en Render como `DATABASE_URL`.
+1. Create the project in Supabase.
+2. Open the SQL Editor and run `schema.sql`.
+3. Copy the connection URI and set it on Render as `DATABASE_URL`.
 
-Si Render ya tiene `DATABASE_URL`, `init_db()` del backend crea o completa las mismas tablas.
+If Render already has `DATABASE_URL`, backend `init_db()` creates or completes the same tables.
 
-## Tablas
+## Tables
 
-| Tabla | Uso |
+| Table | Use |
 |-------|-----|
-| `users` | Cuentas, invitados y dueños de salón |
-| `scans` | Historial de residuos, puntos, foto |
-| `classrooms` | Salones y código de invitación |
-| `classroom_members` | Miembros y ranking |
+| `users` | Accounts, guests, and classroom owners |
+| `scans` | Waste history, points, photo |
+| `classrooms` | Classrooms and invite seed |
+| `classroom_members` | Membership and ranking |
 
-## Relaciones
+## Relations
 
-- Un usuario tiene muchos escaneos (`scans.user_id` → `users.id`).
-- Un usuario puede ser dueño de salones (`classrooms.owner_id` → `users.id`).
-- Un salón tiene muchos miembros (`classroom_members`).
-- Si se borra un usuario o un salón, Postgres borra en cascada lo que depende.
+- A user has many scans (`scans.user_id` → `users.id`).
+- A user may own classrooms (`classrooms.owner_id` → `users.id`).
+- A classroom has many members (`classroom_members`).
+- Deleting a user or classroom cascades in Postgres.
 
-Índices: `idx_scans_user` (historial), `idx_members_user` (mis salones).
+Indexes: `idx_scans_user` (history), `idx_members_user` (my classrooms).
