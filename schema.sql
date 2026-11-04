@@ -1,6 +1,7 @@
 -- EcoScan para Supabase / Postgres.
--- Mañana: pega esto en el SQL Editor de Supabase.
+-- Pega esto en el SQL Editor de Supabase (o deja que el backend cree las tablas).
 
+-- Cuentas. El correo es único; los invitados usan @invitado.ecoscan.
 create table if not exists users (
     id bigint generated always as identity primary key,
     name text not null,
@@ -9,6 +10,7 @@ create table if not exists users (
     created_at timestamptz not null default now()
 );
 
+-- Residuos escaneados. photo guarda el JPEG; points los calcula el backend.
 create table if not exists scans (
     id bigint generated always as identity primary key,
     user_id bigint not null references users(id) on delete cascade,
@@ -25,6 +27,7 @@ create table if not exists scans (
 
 create index if not exists idx_scans_user on scans (user_id, created_at desc);
 
+-- Salón de clase. code es el código interno; el de invitación rota en el backend.
 create table if not exists classrooms (
     id bigint generated always as identity primary key,
     name text not null,
@@ -33,6 +36,7 @@ create table if not exists classrooms (
     created_at timestamptz not null default now()
 );
 
+-- Un usuario no entra dos veces al mismo salón.
 create table if not exists classroom_members (
     classroom_id bigint not null references classrooms(id) on delete cascade,
     user_id bigint not null references users(id) on delete cascade,
@@ -41,4 +45,3 @@ create table if not exists classroom_members (
 );
 
 create index if not exists idx_members_user on classroom_members (user_id);
-
