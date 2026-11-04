@@ -86,3 +86,4 @@ comment on index idx_members_user is 'Classrooms for a given user.';
 -- ON DELETE CASCADE removes scans when a user is deleted. (10)
 -- users.email is unique. (11)
 -- scans.photo is optional JPEG. (12)
+-- classrooms.code is a stable invite seed. (13)
