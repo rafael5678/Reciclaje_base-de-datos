@@ -93,3 +93,4 @@ comment on table lab_attempts is 'Tiros del taller de separación. No reescribe 
 comment on column lab_attempts.user_id is 'Quién tiró la pieza.';
 comment on column lab_attempts.piece_id is 'Pieza del catálogo del laboratorio (tapa, etiqueta, cuerpo).';
 comment on column lab_attempts.bin_id is 'Caneca elegida: yellow, blue, green, black o brown.';
+comment on column lab_attempts.correct is 'Si la caneca coincidía con la pieza.';
