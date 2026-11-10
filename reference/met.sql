@@ -1,0 +1,1 @@
+-- MET. Lata de aluminio o hojalata. Enjuagar.
