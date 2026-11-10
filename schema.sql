@@ -86,5 +86,5 @@ create table if not exists lab_attempts (
     created_at timestamptz not null default now()
 );
 
--- Lists lab throws for ranking without scanning the whole table.
+-- Lista tiros del laboratorio para el ranking sin recorrer toda la tabla.
 create index if not exists idx_lab_attempts_user on lab_attempts (user_id, created_at desc);
