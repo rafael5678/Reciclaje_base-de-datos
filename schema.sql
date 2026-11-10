@@ -1,4 +1,4 @@
--- EcoScan schema v1 for Supabase / Postgres.
+-- Esquema EcoScan v1 para Supabase / Postgres.
 -- Paste this in the Supabase SQL editor (or let the backend create the tables).
 
 -- Cuentas. El correo es único; los invitados usan @invitado.ecoscan.
