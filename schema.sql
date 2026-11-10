@@ -45,7 +45,7 @@ create table if not exists classroom_members (
     primary key (classroom_id, user_id)
 );
 
--- Lists a user's classrooms without a full table scan.
+-- Lista los salones de un usuario sin recorrer toda la tabla.
 create index if not exists idx_members_user on classroom_members (user_id);
 comment on table users is 'Cuentas de EcoScan, también invitados.';
 comment on column users.email is 'Correo único de inicio de sesión.';
