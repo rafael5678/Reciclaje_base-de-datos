@@ -1,29 +1,33 @@
-# EcoScan — database
+# EcoScan — base de datos
 
-Schema for **Supabase (Postgres)**. The backend can also create these tables on boot when `DATABASE_URL` is set.
+Esquema para **Supabase (Postgres)**. El backend también crea estas tablas al arrancar si existe `DATABASE_URL`.
 
-## How to apply it
+## Cómo aplicarlo
 
-1. Create the project in Supabase.
-2. Open the SQL Editor and run `schema.sql`.
-3. Copy the connection URI and set it on Render as `DATABASE_URL`.
+1. Crea el proyecto en Supabase.
+2. Abre el SQL Editor y ejecuta `schema.sql`.
+3. Copia la URI y ponla en Render como `DATABASE_URL`.
 
-If Render already has `DATABASE_URL`, backend `init_db()` creates or completes the same tables.
+Si Render ya tiene `DATABASE_URL`, `init_db()` del backend crea o completa las mismas tablas, incluida `lab_attempts`.
 
-## Tables
+## Tablas
 
-| Table | Use |
+| Tabla | Uso |
 |-------|-----|
-| `users` | Accounts, guests, and classroom owners |
-| `scans` | Waste history, points, photo |
-| `classrooms` | Classrooms and invite seed |
-| `classroom_members` | Membership and ranking |
+| `users` | Cuentas, invitados y dueños de salón |
+| `scans` | Historial, puntos, foto opcional |
+| `classrooms` | Salones y semilla de invitación |
+| `classroom_members` | Membresía y ranking |
+| `lab_attempts` | Tiros del laboratorio (penalización) |
 
-## Relations
+## Relaciones
 
-- A user has many scans (`scans.user_id` → `users.id`).
-- A user may own classrooms (`classrooms.owner_id` → `users.id`).
-- A classroom has many members (`classroom_members`).
-- Deleting a user or classroom cascades in Postgres.
+- Un usuario tiene muchos escaneos (`scans.user_id` → `users.id`).
+- Un usuario puede ser dueño de salones (`classrooms.owner_id` → `users.id`).
+- Un salón tiene muchos miembros (`classroom_members`).
+- Un usuario tiene muchos tiros de laboratorio (`lab_attempts`).
+- Borrar un usuario o un salón hace cascade en Postgres.
 
-Indexes: `idx_scans_user` (history), `idx_members_user` (my classrooms).
+Índices: `idx_scans_user`, `idx_members_user`, `idx_lab_attempts_user`.
+
+Consultas de solo lectura en `queries/`. Códigos de catálogo en `reference/`. Textos en español e inglés en `docs/`.
