@@ -55,7 +55,7 @@ comment on column users.created_at is 'Momento en que se creó la cuenta.';
 comment on table scans is 'Historial de residuos clasificados.';
 comment on column scans.user_id is 'Dueño del escaneo.';
 comment on column scans.material_code is 'Código del catálogo: PET, HDPE, MLT, PAP, VID, MET, ORG o GEN.';
-comment on column scans.object_name is 'Name of the object in the photo.';
+comment on column scans.object_name is 'Nombre del objeto de esa foto, no el del fondo.';
 comment on column scans.confidence is 'Model confidence from 0 to 1.';
 comment on column scans.separated_well is 'Whether the user sorted it correctly.';
 comment on column scans.points is 'Points awarded by the backend.';
