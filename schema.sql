@@ -52,7 +52,7 @@ comment on column users.email is 'Correo único de inicio de sesión.';
 comment on column users.password_hash is 'Hash PBKDF2 de la contraseña. Nunca se devuelve al cliente.';
 comment on column users.name is 'Nombre visible. Puede llevar un espacio, como Rafael Calzada.';
 comment on column users.created_at is 'Momento en que se creó la cuenta.';
-comment on table scans is 'Saved waste classifications.';
+comment on table scans is 'Historial de residuos clasificados.';
 comment on column scans.user_id is 'Owner of the scan.';
 comment on column scans.material_code is 'Catalog code such as PET or PAP.';
 comment on column scans.object_name is 'Name of the object in the photo.';
