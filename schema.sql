@@ -75,7 +75,7 @@ comment on column classroom_members.joined_at is 'Cuándo se unió al salón.';
 comment on index idx_scans_user is 'Historial de un usuario, del más reciente al más viejo.';
 comment on index idx_members_user is 'Salones de un usuario sin recorrer toda la tabla.';
 
--- Lab throws. Ranking points move by delta; scan history stays untouched.
+-- Tiros del laboratorio. El ranking usa delta; el historial de escaneos no se toca.
 create table if not exists lab_attempts (
     id bigint generated always as identity primary key,
     user_id bigint not null references users(id) on delete cascade,
