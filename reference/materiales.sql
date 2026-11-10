@@ -1,0 +1,11 @@
+-- Referencia. El catálogo real está en backend/app/models/catalog.py.
+-- No crees esta tabla en Supabase: la API no la lee.
+
+-- PET  Amarillo  Botella plástica
+-- HDPE Amarillo  Envase opaco
+-- MLT  Amarillo  Caja de leche o jugo
+-- PAP  Azul      Papel o cartón
+-- VID  Verde     Vidrio de envase
+-- MET  Gris      Lata
+-- ORG  Marrón    Restos de comida
+-- GEN  Negro     No se recicla
