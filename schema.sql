@@ -62,7 +62,7 @@ comment on column scans.points is 'Puntos que calcula el backend, no un trigger 
 comment on column scans.weight_kg is 'Peso de catálogo de ese material, en kg.';
 comment on column scans.co2_kg is 'CO2 evitado si se separó bien, en kg.';
 comment on column scans.photo is 'JPEG opcional. El historial puede existir sin foto.';
-comment on column scans.created_at is 'When the scan was saved.';
+comment on column scans.created_at is 'Cuándo se guardó el escaneo.';
 comment on table classrooms is 'Class groups for ranking.';
 comment on column classrooms.name is 'Classroom display name.';
 comment on column classrooms.code is 'Stable seed for rotating invites.';
