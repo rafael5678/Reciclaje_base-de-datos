@@ -1,0 +1,1 @@
+-- GEN. No se recicla: lapicero, servilleta sucia, RAEE. Caneca negra.
