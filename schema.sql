@@ -73,7 +73,7 @@ comment on column classroom_members.classroom_id is 'Salón al que se une.';
 comment on column classroom_members.user_id is 'Usuario miembro.';
 comment on column classroom_members.joined_at is 'Cuándo se unió al salón.';
 comment on index idx_scans_user is 'Historial de un usuario, del más reciente al más viejo.';
-comment on index idx_members_user is 'Classrooms for a given user.';
+comment on index idx_members_user is 'Salones de un usuario sin recorrer toda la tabla.';
 
 -- Lab throws. Ranking points move by delta; scan history stays untouched.
 create table if not exists lab_attempts (
