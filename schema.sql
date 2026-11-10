@@ -48,7 +48,7 @@ create table if not exists classroom_members (
 -- Lists a user's classrooms without a full table scan.
 create index if not exists idx_members_user on classroom_members (user_id);
 comment on table users is 'Cuentas de EcoScan, también invitados.';
-comment on column users.email is 'Unique login email.';
+comment on column users.email is 'Correo único de inicio de sesión.';
 comment on column users.password_hash is 'PBKDF2 password hash.';
 comment on column users.name is 'Display name.';
 comment on column users.created_at is 'Account creation time.';
