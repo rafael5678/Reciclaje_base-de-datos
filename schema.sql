@@ -69,7 +69,7 @@ comment on column classrooms.code is 'Semilla estable. El código de invitación
 comment on column classrooms.owner_id is 'Usuario que creó el salón.';
 comment on column classrooms.created_at is 'Cuándo se creó el salón.';
 comment on table classroom_members is 'Miembros del salón. Un usuario no se une dos veces.';
-comment on column classroom_members.classroom_id is 'Classroom being joined.';
+comment on column classroom_members.classroom_id is 'Salón al que se une.';
 comment on column classroom_members.user_id is 'Member user id.';
 comment on column classroom_members.joined_at is 'When the member joined.';
 comment on index idx_scans_user is 'Per-user scan history by date.';
