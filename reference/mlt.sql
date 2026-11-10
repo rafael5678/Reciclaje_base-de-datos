@@ -1,0 +1,1 @@
+-- MLT. Caja de leche o jugo. Parece cartón, va al amarillo, no al azul.
