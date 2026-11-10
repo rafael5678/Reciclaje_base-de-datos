@@ -1,0 +1,1 @@
+-- ORG. Cáscaras y restos de comida. Caneca marrón. Sin bolsa plástica.
