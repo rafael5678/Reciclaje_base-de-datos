@@ -1,0 +1,1 @@
+-- PAP. Papel y cartón limpios. Caneca azul.
