@@ -1,0 +1,1 @@
+-- HDPE. Envase opaco de champú, detergente o yogur. Amarillo.
