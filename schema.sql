@@ -60,7 +60,7 @@ comment on column scans.confidence is 'Confianza del modelo, de 0 a 1.';
 comment on column scans.separated_well is 'Si el usuario lo separó bien.';
 comment on column scans.points is 'Puntos que calcula el backend, no un trigger SQL.';
 comment on column scans.weight_kg is 'Peso de catálogo de ese material, en kg.';
-comment on column scans.co2_kg is 'Avoided CO2 if sorted well.';
+comment on column scans.co2_kg is 'CO2 evitado si se separó bien, en kg.';
 comment on column scans.photo is 'Optional JPEG bytes.';
 comment on column scans.created_at is 'When the scan was saved.';
 comment on table classrooms is 'Class groups for ranking.';
