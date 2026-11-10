@@ -96,3 +96,4 @@ comment on column lab_attempts.bin_id is 'Caneca elegida: yellow, blue, green, b
 comment on column lab_attempts.correct is 'Si la caneca coincidía con la pieza.';
 comment on column lab_attempts.delta is 'Ajuste de puntos. Un error resta 5. Un acierto deja 0.';
 comment on column lab_attempts.created_at is 'Cuándo se tiró la pieza.';
+comment on index idx_lab_attempts_user is 'Suma de penalizaciones de laboratorio por usuario.';
