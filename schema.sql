@@ -88,3 +88,5 @@ create table if not exists lab_attempts (
 
 -- Lista tiros del laboratorio para el ranking sin recorrer toda la tabla.
 create index if not exists idx_lab_attempts_user on lab_attempts (user_id, created_at desc);
+
+comment on table lab_attempts is 'Tiros del taller de separación. No reescribe scans.';
