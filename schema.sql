@@ -37,7 +37,7 @@ create table if not exists classrooms (
     created_at timestamptz not null default now()
 );
 
--- A user cannot join the same classroom twice.
+-- Un usuario no puede unirse dos veces al mismo salón.
 create table if not exists classroom_members (
     classroom_id bigint not null references classrooms(id) on delete cascade,
     user_id bigint not null references users(id) on delete cascade,
