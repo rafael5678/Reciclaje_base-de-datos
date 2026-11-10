@@ -1,0 +1,1 @@
+-- VID. Botella o frasco de vidrio. Caneca verde. No espejos ni ventanas.
