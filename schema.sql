@@ -74,3 +74,14 @@ comment on column classroom_members.user_id is 'Member user id.';
 comment on column classroom_members.joined_at is 'When the member joined.';
 comment on index idx_scans_user is 'Per-user scan history by date.';
 comment on index idx_members_user is 'Classrooms for a given user.';
+
+-- Lab throws. Ranking points move by delta; scan history stays untouched.
+create table if not exists lab_attempts (
+    id bigint generated always as identity primary key,
+    user_id bigint not null references users(id) on delete cascade,
+    piece_id text not null,
+    bin_id text not null,
+    correct boolean not null,
+    delta integer not null,
+    created_at timestamptz not null default now()
+);
