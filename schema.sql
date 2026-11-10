@@ -64,7 +64,7 @@ comment on column scans.co2_kg is 'CO2 evitado si se separó bien, en kg.';
 comment on column scans.photo is 'JPEG opcional. El historial puede existir sin foto.';
 comment on column scans.created_at is 'Cuándo se guardó el escaneo.';
 comment on table classrooms is 'Salones para el ranking del curso.';
-comment on column classrooms.name is 'Classroom display name.';
+comment on column classrooms.name is 'Nombre del salón.';
 comment on column classrooms.code is 'Stable seed for rotating invites.';
 comment on column classrooms.owner_id is 'User who created the classroom.';
 comment on column classrooms.created_at is 'Classroom creation time.';
