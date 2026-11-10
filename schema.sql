@@ -85,3 +85,6 @@ create table if not exists lab_attempts (
     delta integer not null,
     created_at timestamptz not null default now()
 );
+
+-- Lists lab throws for ranking without scanning the whole table.
+create index if not exists idx_lab_attempts_user on lab_attempts (user_id, created_at desc);
